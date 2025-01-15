@@ -1,0 +1,86 @@
+
+{
+	"info": {
+		"_postman_id": "4354fe2f-7bb6-4e44-b72e-947181196466",
+		"name": "HD Wallet Backend API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36497567"
+	},
+	"item": [
+		{
+			"name": "Generate or Validate Mnemonic",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/mnemonic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"mnemonic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Derive Wallets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/wallets?mnemonic=express little degree forward repair demand response opera govern anger miracle boat&count=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"wallets"
+					],
+					"query": [
+						{
+							"key": "mnemonic",
+							"value": "express little degree forward repair demand response opera govern anger miracle boat"
+						},
+						{
+							"key": "count",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sync Wallet Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/sync",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sync"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
